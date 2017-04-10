@@ -1,0 +1,20 @@
+body {
+  background-image: url(https://www.toperfect.com/pic/Oil%20Painting%20Styles%20on%20Canvas/Landscapes/Warship/6-modern-war-ship.jpg);
+  background-repeat: no-repeat;
+}
+
+table {
+  width: 600px;
+  height: 600px;
+  border: black solid 10px;
+  border-collapse: collapse;
+}
+
+td {
+  border: black solid 5px;
+  border-collapse: collapse;
+}
+
+tr {
+  padding: 0px;
+}
