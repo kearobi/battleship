@@ -1,16 +1,11 @@
 FIRST EPIC
 
-1. create board of 10 by 10 grid
+YES - 1. create board of 10 by 10 grid
 
-Hint: Use a for loop to append to a table a <tr> tag, within that loop create another for loop to create the <td> tags. For a recap on loops look at Learn Day "Javascript Arrays and Iteration".
-Hint: Each loop will count to 10.
-Hint: Each <td> needs to have an id.
 
-2. when user clicks a position, position changes color (showing it's been torpedoed)
+no- 2. when user clicks a position, position changes color (showing it's been torpedoed)
 
-Hint: document.getElementById("myDiv").className = "hit" to set the class of an element called "myDiv"
-
-3. create a counter to track how many torpedoes used
+no - 3. create a counter to track how many torpedoes used
 
 4. once a position has been torpedoed, can't be torpedoed again
 
