@@ -55,7 +55,7 @@ createBoard()
 function createBoard() {
   for (var ran = 0; ran<= 4; ran++) {
     newShipLoc()
-    while (fit()){
+    while (fit() === true){
       newShipLoc()
       }
     gameState.board[row][col] = gameState.SHIP
