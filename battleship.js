@@ -28,7 +28,7 @@ var shipLocs = []
 
 // an object to store our gameState and game board
 var gameState = {
-  SHIP: [2, 3, 3, 4, 5],
+  SHIP: 1,
   board: [
     ["", "", "", "", "", "", "", "", "", ""],
     ["", "", "", "", "", "", "", "", "", ""],
@@ -47,19 +47,16 @@ var gameState = {
 // while loop used to make sure no ship location can be the same
 createBoard()
 function createBoard() {
-  newShipLoc()
-  gameState.SHIP.forEach(function(){
-    if (shipLength === 2){
-      while(fit()){
-        newShipLoc()
+  for (var i = 0; i<= 4; i++) {
+    newShipLoc()
+    while (fit()){
+      newShipLoc()
       }
-      gameState.board[row][col] 
-      shipLocs.push([row,col])
-      gameState.board[row][col+1]
-      shipLocs.push([row,col+1])
-    }
-    })
+    gameState.board[row][col] = gameState.SHIP
+    shipLocs.push([row,col])
+  }
 }
+
 
 
 
@@ -75,7 +72,7 @@ function shootTorpedo(e){
   console.log(aRow)
   console.log(aCol)
   // protects user from using torpedo's on space that has already been torpedoed
-  if (gameState.board[aRow][aCol] != "" && gameState.board[aRow][aCol] != "2") {
+  if (gameState.board[aRow][aCol] != "" && gameState.board[aRow][aCol] != "1") {
     alert("target has already been torpedo'd")
   }
   // changes the color of a space without a ship to purple and updates the gameState.board with a miss on that index, also updates torpedo counts for used and remaining and changes the innerHTML
@@ -185,16 +182,3 @@ function fit(length) {
 
 
   // backup code in case we break this shizzzz
-
-  // createBoard()
-  // function createBoard() {
-  //   for (var i = 0; i<= 4; i++) {
-  //     newShipLoc()
-  //     while (fit()){
-  //       newShipLoc()
-  //       }
-  //     gameState.board[row][col] = gameState.SHIP[0]
-  //     shipLocs.push([row,col])
-  //
-  //   }
-  // }
